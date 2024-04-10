@@ -24,6 +24,9 @@
       crossorigin="anonymous"
     ></script>
     <title>Login/Sign Up</title>
+	<link rel="icon" type="image/x-icon" href="../static/favicon.png">
+
+
   </head>
   <nav class="navbar navbar-expand-lg">
 	<div class="container-fluid">
@@ -35,14 +38,14 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
-			<a class="nav-link active" aria-current="page" href="#">Home</a>
+			<a class="nav-link active" aria-current="page" href="../templates/homepage.html">Home</a>
 			<a class="nav-link active" aria-current="page" href="#">About</a>
 			<a class="nav-link" href="../templates/tracker.html">Period Tracker</a>
 			<a class="nav-link" href="../templates/ai.html">AI Consultation</a>
-			<a class="nav-link" href="#">Meditation Zone</a>
+			<a class="nav-link" href="../templates/indexMeditation.html">Meditation Zone</a>
 		  </div>
 		  <div class="navbar-nav ms-auto">
-			<a class="nav-link" href="#" id="login">Login/Signup</a>
+			<a class="nav-link" href="../templates/login.html" id="login">Login/Signup</a>
 		  </div>
 	  </div>
 	</div>
@@ -60,33 +63,27 @@
 		  <p>login here using your username and password</p>
 	   </header>
 	   <!--     End  header Content  -->
-	   <br>
+
 	   <div class="field-set">
 		 
 		  <!--   user name -->
-			 <span class="input-item">
-			   <i class="fa fa-user-circle"></i>
-			 </span>
+
 			<!--   user name Input-->
 			 <input class="form-input" id="txt-input" type="text" placeholder="@UserName" required>
 		 
-		  <br>
 		 
 			   <!--   Password -->
 		 
-		  <span class="input-item">
-			<i class="fa fa-key"></i>
-		   </span>
 		  <!--   Password Input-->
 		  <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required>
 		 
 	<!--      Show/hide password  -->
-		 <span>
-			<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
-		 </span>
+	<span>
+		<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye">Show Password</i>
+	 </span>
+	 
 		 
 		 
-		  <br>
 	<!--        buttons -->
 	<!--      button LogIn -->
 		  <button class="log-in"> Log In </button>
@@ -99,7 +96,7 @@
 	<!--     Sign Up button -->
 		  <button class="btn submits sign-up">Sign Up 
 	<!--         Sign Up font icon -->
-		  <i class="fa fa-user-plus" aria-hidden="true"></i>
+		  
 		  </button>
 	<!--      End Other the Division -->
 	   </div>
@@ -110,6 +107,6 @@
 	  <!-- End Form -->
 	</form>
 	</div>
-	<script src="../static/main2.js"></script>
+	<script src="../static/login.js"></script>
   </body>
 </html>

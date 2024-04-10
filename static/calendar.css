@@ -34,7 +34,7 @@ form{
 
 nav{
   background-color: #2a0912;
-  height: 13vh !important;
+  height: 11vh !important;
   width: 100% !important;
 }
 
@@ -348,3 +348,10 @@ button {
   background-color: #2f3542;
 }
 
+.modal-backdrop{
+  position:initial !important;
+}
+
+*, ::after, ::before {
+  box-sizing:content-box !important;
+}

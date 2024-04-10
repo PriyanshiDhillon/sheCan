@@ -3,6 +3,25 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+ #logo{
+    height: 10vh;
+    width: 13vh;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    border-radius: 5rem;
+  }
+
+  #myButton{
+    height: 10vh;
+    width: 13vh;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    align-items: center;
+    border-radius: 5rem;
+    background-color: black;
+    color: white;
+  }
   
   /* VIDEO */
   .video {
