@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  /* background-color:#FFB3C6 !important ; */
+  background-image: url(../static/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#createEventForm{
+  margin-top: 20vh;
+  display: grid;
+}
+
+nav{
+  background-color: #2a0912;
+  height: 13vh !important;
+  width: 100% !important;
+}
+
+.nav-link{
+  color: #FB6F92 !important;
+}
+
+.nav-link:hover{
+  color: #FFE5EC !important;
+}
+
+
+#createEventButton {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFE5EC;;
+    cursor: pointer;
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    min-height: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 19px 26px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+  }
+
+  @media (min-width: 768px) {
+    button {
+      padding: 19px 32px;
+    }
+  }
+  
+  #createEventButton:before,
+  #createEventButton:after {
+    border-radius: 80px;
+  }
+  
+  #createEventButton:before {
+    background-image:linear-gradient(92.83deg, #FFC2D1 0, #2a0912 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  #createEventButton:after {
+    background-color: transparent;
+    background-image: linear-gradient(#2a0912 0, #FFC2D1 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+  }
+  
+  #createEventButton:hover:not(:disabled):before {
+    background: linear-gradient(92.83deg, #FFC2D1 0, #2a0912 100%);
+  }
+  
+  #createEventButton:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  
+  #createEventButton:active:not(:disabled) {
+    color: #ccc;
+  }
+  
+  #createEventButton:active:not(:disabled):before {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #FFC2D1 0, #2a0912 100%);
+  }
+  
+  #createEventButton:disabled {
+    cursor: default;
+    opacity: .24;
+  }
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  width: 150rem !important;
+}
+
+  .modal-body{
+    background-image: linear-gradient(to bottom right, #FFE5EC , #FFB3C6, #FB6F92) !important;
+  }
+
+  .modal-header{
+    background-image: linear-gradient(to right, #FFE5EC , #FFB3C6) !important;
+  }
+
+
+input{
+  border-radius: 3rem;
+  border: 1px solid #2a0912;
+  box-shadow: black;
+  width: 100%;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  &:focus{
+    outline: none;
+  }
+}
+
+
+.container {
+  width: 770px;
+  background-color: #fff;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header #month {
+  color: #FB6F92;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+}
+
+.header button {
+  background-color: #FB6F92;
+}
+.weekdays {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.weekdays div {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 3px black;
+  color: #7f8fa6;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.day:hover {
+  background-color: rgba(112, 111, 211, 0.1);
+  color: #706fd3;
+}
+
+/* #currentDay {
+  background-color: #706fd3;
+  color: #fff;
+} */
+
+.highlightedPink {
+  background-color: #FB6F92;
+}
+
+.highlightedBlue {
+  background-color: #BDE0FE;
+}
+
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #3d3d3d;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event.holiday {
+  background-color: palegreen;
+  color: #3d3d3d;
+}
+
+.plain {
+  cursor: default;
+  box-shadow: none;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#addEvent,
+#viewEvent {
+  display: none;
+  width: 350px;
+  background-color: #fff;
+  padding: 25px;
+  position: absolute;
+  z-index: 20;
+}
+
+#addEvent h2,
+#viewEvent h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#txtTitle {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #cbd4c2;
+  font-size: 16px;
+}
+
+#btnSave {
+  background-color: #2ed573;
+}
+
+.btnClose {
+  background-color: #2f3542;
+}
+
+#viewEvent p {
+  margin-bottom: 20px;
+}
+
+#btnDelete {
+  background-color: #ea2027;
+}
+
+.error {
+  border-color: #ea2027 !important;
+}
+
+.background{
+  height: max-content;
+  width: 100%;
+  background-color: #2f3542;
+}
+
